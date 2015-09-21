@@ -14,7 +14,3 @@ Good to go, all packages installed ok, ready to code.
 ```
 
 You're ready fot the workshop!
-
-Otherwise, checkout one of these videos to setup your environment:
-- if you have Windows: https://www.youtube.com/watch?v=pzV8Se7Fqgc
-- if you have OSX: https://www.youtube.com/watch?v=UMftbOgUON8
