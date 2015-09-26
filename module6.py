@@ -1,26 +1,18 @@
-from functions import save_figure
-from os.path import splitext
-figname = splitext(__file__)[0]+'_'
-ifig = 0
+# Module 6: Avoid overfitting with regularisation
 
-
-################################################################################
-################################### MODULE 6 ###################################
-############################# Regularisation ###################################
-################################################################################
-
-
-# Learning activity 2: Ridge and Lasso regularisations
+# Previous imports
 import pandas as pd
 import numpy as np
 import matplotlib.pyplot as plt
-from sklearn.pipeline import make_pipeline
-from sklearn.preprocessing import StandardScaler, PolynomialFeatures
-from sklearn.linear_model import Ridge, Lasso
+from sklearn.linear_model import LinearRegression
+from functions import PolynomialRegression
+from sklearn.cross_validation import cross_val_score
 
-from functions import PolynomialRidge, PolynomialLasso, PolynomialRegression
+# New imports
+from functions import PolynomialRidge, PolynomialLasso
+from sklearn.grid_search import GridSearchCV
 
+# Load dataset
 bikes_df = pd.read_csv('./data/bikes.csv')
-features = ['temperature','humidity','windspeed']
-X = bikes_df[features].values
-y = bikes_df['count'].values
+
+# Code after this

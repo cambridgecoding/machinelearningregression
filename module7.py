@@ -1,30 +1,17 @@
-from functions import save_figure
-from os.path import splitext
-figname = splitext(__file__)[0]+'_'
-ifig = 0
+# Module 7: Predict the future with autoregression
 
-################################################################################
-################################### MODULE 7 ###################################
-############################# Advanced fitting methods #########################
-################################################################################
-
-#Learning activity 1: use any sklearn model
-
-from sklearn.tree import DecisionTreeRegressor
-from sklearn.cross_validation import cross_val_score
-from sklearn.linear_model import LinearRegression
-from sklearn import metrics
-from sklearn.ensemble import RandomForestRegressor
-from sklearn.neighbors import KNeighborsRegressor
-from sklearn.svm import SVR
-import numpy as np
+# Previous imports
 import pandas as pd
+import numpy as np
 import matplotlib.pyplot as plt
+from sklearn.linear_model import LinearRegression
+from sklearn.metrics import mean_absolute_error
 
-from functions import NonLinearRegression, organize_data
+# New imports
+from functions import organize_data
 
-
-#Learning activity 2: Custom nonlinear regression
+# Load dataset
 bikes_df = pd.read_csv('./data/bikes.csv')
-temperature = bikes_df[['temperature']].values
 bikes = bikes_df['count'].values
+
+# Code after this
